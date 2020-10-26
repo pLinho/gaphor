@@ -188,7 +188,6 @@ class StorageTestCase(TestCase):
         c1 = self.create(ClassItem, UML.Class)
         c2 = self.create(ClassItem, UML.Class)
         c2.matrix.translate(200, 200)
-        self.diagram.canvas.update_matrix(c2)
         assert tuple(self.diagram.canvas.get_matrix_i2c(c2)) == (1, 0, 0, 1, 200, 200)
 
         a = self.create(AssociationItem)
